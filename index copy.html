@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Input on Mobile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* สไตล์ของ input ช่องค้นหา */
+        .search-input {
+            display: none;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-left: 10px;
+            width: 200px;
+        }
+
+        /* สไตล์ไอคอนค้นหา */
+        .btSearchMobile {
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        /* แสดงช่องค้นหาบนมือถือเท่านั้น */
+        @media (max-width: 768px) {
+            .search-input {
+                display: none;
+            }
+            .btSearchMobile {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ไอคอนค้นหา -->
+    <i class="bi bi-search btSearchMobile"></i>
+    
+    <!-- ช่องกรอกข้อความที่จะแสดงเมื่อคลิก -->
+    <input type="text" class="search-input" placeholder="ค้นหา...">
+
+    <script>
+        // เมื่อคลิกที่ไอคอนค้นหา
+        document.querySelector('.btSearchMobile').addEventListener('click', function() {
+            var searchInput = document.querySelector('.search-input');
+            
+            // เปลี่ยนการแสดงผลของ input field
+            searchInput.style.display = searchInput.style.display === 'block' ? 'none' : 'block';
+            
+            // เมื่อช่องกรอกข้อความแสดงขึ้นมา ให้โฟกัสไปที่ช่องกรอก
+            if (searchInput.style.display === 'block') {
+                searchInput.focus();
+            }
+        });
+    </script>
+</body>
+</html>

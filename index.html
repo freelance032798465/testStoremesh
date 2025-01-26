@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Storemesh</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="./public/logo.png" alt="logo">
+                <div class="logo-text">
+                    <h1>Storemesh</h1>
+                    <p>Connecting Business</p>
+                </div>
+            </div>
+            <div class="filter">
+                <h2>Filter</h2>
+                <div class="filter-box">
+                    <span></span>
+                    <i class="bi bi-caret-down"></i>
+                    <div class="filter-option">
+                        <ul>
+                            <li class="filter-item">Filter 1</li>
+                            <li class="filter-item">Filter 2</li>
+                            <li class="filter-item">Filter 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <i class="bi bi-list btMenuMobile"></i>
+                <div class="search-mobile">
+                    <input type="text" placeholder="Search" class="search-mobile-input">
+                    <i class="bi bi-search btSearchMobile"></i>
+                </div>
+            </div>
+            <div class="mobile-menu-container">
+                <ul>
+                    <li class="mobile-menu-item">menu 1</li>
+                    <li class="mobile-menu-item">menu 2</li>
+                    <li class="mobile-menu-item">menu 3</li>
+                    <li class="mobile-menu-item">Option 1</li>
+                    <li class="mobile-menu-item">Option 2</li>
+                    <li class="mobile-menu-item">Option 3</li>
+                    <li class="mobile-menu-item">Option 4</li>
+                    <li class="mobile-menu-item">Option 5</li>
+                    <li class="mobile-menu-item">Option 6</li>
+                    <li class="mobile-menu-item">Profile</li>
+                    <li class="mobile-menu-item">Setting</li>
+                    <li class="mobile-menu-item">Logout</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <nav class="navbar">
+                <div class="menu">
+                    <a href="#">menu 1</a>
+                    <a href="#">menu 2</a>
+                    <a href="#">menu 3</a>
+                </div>
+                <div class="menu-right">
+                    <div class="search-box">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <i class="bi bi-grid-3x3-gap-fill btGirdMenu"></i>
+                    <div class="grid-menu">
+                        <div class="grid-item grid-item-option1">Option 1</div>
+                        <div class="grid-item grid-item-option2">Option 2</div>
+                        <div class="grid-item grid-item-option3">Option 3</div>
+                        <div class="grid-item grid-item-option4">Option 4</div>
+                        <div class="grid-item grid-item-option5">Option 5</div>
+                        <div class="grid-item grid-item-option6">Option 6</div>
+                        <div class="grid-item grid-item-menu1">menu 1</div>
+                        <div class="grid-item grid-item-menu2">menu 2</div>
+                        <div class="grid-item grid-item-menu3">menu 3</div>
+                    </div>
+                    <a class="btUser" href="#">A</a>
+                    <div class="user-menu">
+                        <ul>
+                            <li class="user-item">Profile</li>
+                            <li class="user-item">Setting</li>
+                            <li class="user-item">Logout</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="data-head">
+                <h3>Data</h3>
+                <div class="sortBy">
+                    <h3>Sort by</h3>
+                    <i class="bi bi-caret-down-fill"></i>
+                </div>
+                <div class="sortby-menu">
+                    <ul>
+                        <li class="sortby-item">Name</li>
+                        <li class="sortby-item">Date</li>
+                        <li class="sortby-item">Visit</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="data-content">
+                <!-- add -->
+            </div>
+            <div class="next-page">
+                <i class="bi bi-chevron-left btBackPage" onclick="changePage(-1)" style="visibility: hidden;"></i>
+                <span class="lbPage">1</span>
+                <i class="bi bi-chevron-right btNextPage" onclick="changePage(1)"></i>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
