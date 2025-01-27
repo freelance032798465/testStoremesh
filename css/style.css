@@ -447,6 +447,7 @@ body {
     top: 0;
     left: 0;
     min-height: 100%;
+    width: 100%;
     z-index: 300;
     background-color: rgb(255, 172, 71);
     justify-content: center;
