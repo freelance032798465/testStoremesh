@@ -370,6 +370,7 @@ body {
     text-decoration: none;
     color: blue;
     transition: text-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .data-more a:hover {
@@ -437,6 +438,65 @@ body {
     width: 100%;
     height: 100%;
     background-color: #00000088;
+}
+
+.detail-container.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    z-index: 300;
+    background-color: rgb(255, 172, 71);
+    justify-content: center;
+    padding: 10px 50px;
+}
+
+.detail-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.detail-container img {
+    height: 20vh;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000;
+}
+
+.detail-skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.detail-skill img {
+    height: 7vh;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #000;
+}
+
+.detail-container p {
+    margin-bottom: 20px;
+}
+
+.btCloseDetail {
+    display: flex;
+    justify-content: center;
+}
+
+.btCloseDetail button {
+    padding: 10px 20px;
+    background-color: rgb(255, 209, 152);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 @media (max-width: 1250px) {
@@ -615,7 +675,7 @@ body {
     }
 
     .data-img {
-        height: 120px;
+        height: 110px;
     }
 
     .data-text {
@@ -626,6 +686,15 @@ body {
 
     .data-text p {
         -webkit-line-clamp: 2;
+    }
+
+    .detail-container.active {
+        padding: 10px 10px;
+        font-size: small;
+    }
+
+    .btCloseDetail button {
+        width: 100%;
     }
 }
 
